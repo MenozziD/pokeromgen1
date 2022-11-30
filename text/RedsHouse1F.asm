@@ -47,6 +47,12 @@ _MewEndBattleText::
 	text "M-ew"
 	done
 
+_PokeText::
+	text "Ecco dov'"
+	line "erano le ..."
+	cont "PALLE POKE#MON!"
+	done
+
 _MomHealText1::
 	text "MOM: <PLAYER>, if"
 	line "you drive your"

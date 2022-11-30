@@ -16,7 +16,7 @@ RedsHouse2F_TextPointers:
 	dw RedsHouse2FSoText
 	dw RedsHouse2FSgaText
 	dw RedsHouse2FMewText
-	dw PickUpItemText
+	dw RedsHouse2FPokeText
 	text_end ; unused
 
 RedsHouse2FSoText:
@@ -73,4 +73,27 @@ MewBeforeBattleText:
 
 MewEndBattleText:
 	text_far _MewEndBattleText
+	text_end
+
+RedsHouse2FPokeText:
+	text_asm
+	ld hl, PokeText
+	call PrintText
+
+	lb bc, MASTER_BALL, 5
+	call GiveItem
+	jr nc, .bagFull
+	;ld b, FLAG_SET
+	;predef FlagActionPredef
+	ld a, SFX_GET_ITEM_2
+	call PlaySoundWaitForCurrent
+	call WaitForSoundToFinish
+	jp TextScriptEnd
+.bagFull
+	ld a, $7
+	ldh [hSpriteIndexOrTextID], a
+	call DisplayTextID
+
+PokeText:
+	text_far _PokeText
 	text_end
