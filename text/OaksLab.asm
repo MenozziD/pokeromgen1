@@ -1,7 +1,9 @@
 _OaksLabGaryText1::
-	text "<RIVAL>: Yo"
-	line "<PLAYER>! Gramps"
-	cont "isn't around!"
+	text "<RIVAL>: Frat'm!"
+	line "<PLAYER>:!?!"
+	para "<RIVAL>: Il vecchio"
+	line "la merda..."
+	cont "non c'e'?"
 
 	para "I ran here 'cos"
 	line "he said he had a"

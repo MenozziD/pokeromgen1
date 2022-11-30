@@ -9,6 +9,44 @@ _MomWakeUpText::
 	cont "for you."
 	done
 
+_SoWakeUpText::
+	text "SO: Ciao Pi"
+	line "hai preso tutto?"
+	cont "Fai Buon Viaggio!"
+	done
+
+_SgaWakeUpText::
+	text "SGA: We Menoz"
+	line "sto curando"
+	cont "le PIANTE!!"
+	cont "Sto giro 1Kg lo"
+	cont "facciamo sicuro!"
+	para "Partitino?"
+	done
+
+_SgaBeforeBattleText::
+	text "SGA: Eh mo"
+	line "so cazzi tuoi!"
+	done
+
+_SgaEndBattleText::
+	text "Chapeux"
+	line "bel match!"
+	done
+
+_SgaAfterBattleText::
+	text "Adesso torno"
+	line "al lavoro!"
+	done
+
+_MewBeforeBattleText::
+	text "Mew!@"
+	text_end
+
+_MewEndBattleText::
+	text "M-ew"
+	done
+
 _MomHealText1::
 	text "MOM: <PLAYER>, if"
 	line "you drive your"
