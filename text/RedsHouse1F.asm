@@ -9,6 +9,11 @@ _MomWakeUpText::
 	cont "for you."
 	done
 
+_NoPartyText::
+	text "E come fai..."
+	line "senza #MON!"
+	done
+
 _SoWakeUpText::
 	text "SO: Ciao Pi"
 	line "hai preso tutto?"

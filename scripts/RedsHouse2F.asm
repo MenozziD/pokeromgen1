@@ -37,9 +37,14 @@ RedsHouse2FSgaText:
 	ld a, [wCurrentMenuItem]
 	and a
 	jr nz, .cancel
+	CheckEvent EVENT_FOLLOWED_OAK_INTO_LAB
+	jr z, .NoParty
 	ld hl, RedsHouse2FTrainerHeader0
 	call TalkToTrainer
 	jp TextScriptEnd
+.NoParty
+	ld hl, NoPartyText
+	call PrintText
 .cancel
 	ld hl, SgaAfterBattleText
 	call PrintText
@@ -61,10 +66,20 @@ SgaAfterBattleText:
 	text_far _SgaAfterBattleText
 	text_end
 
+NoPartyText:
+	text_far _NoPartyText
+	text_waitbutton
+	text_end
+
 RedsHouse2FMewText:
 	text_asm
+	CheckEvent EVENT_FOLLOWED_OAK_INTO_LAB
+	jr z, .NoParty
 	ld hl, RedsHouse2FTrainerHeader1
 	call TalkToTrainer
+.NoParty
+	ld hl, MewBeforeBattleText
+	call PrintText
 	jp TextScriptEnd
 
 MewBeforeBattleText:
