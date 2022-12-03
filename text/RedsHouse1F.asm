@@ -14,6 +14,13 @@ _NoPartyText::
 	line "senza #MON!"
 	done
 
+_SoGameText::
+	text "SO: Ciao Pi"
+	line "ho scaricato..."
+	cont "un gioco nuovo!"
+	cont "Vuoi provarlo?"
+	done
+
 _SoWakeUpText::
 	text "SO: Ciao Pi"
 	line "hai preso tutto?"

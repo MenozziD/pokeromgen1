@@ -21,9 +21,24 @@ RedsHouse2F_TextPointers:
 
 RedsHouse2FSoText:
 	text_asm
+	ld hl, SoGameText
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .done
+	ld a, 1
+	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
+	farcall SurfingPikachuMinigame
+	jp TextScriptEnd
+.done
 	ld hl, SoWakeUpText
 	call PrintText
 	jp TextScriptEnd
+
+SoGameText:
+	text_far _SoGameText
+	text_end
 
 SoWakeUpText:
 	text_far _SoWakeUpText
