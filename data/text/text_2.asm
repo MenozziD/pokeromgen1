@@ -614,8 +614,8 @@ _IndigoPlateauHQText::
 _RedBedroomSNESText::
 	text "<PLAYER> faccio una"
 	line "partita col N64!"
-	cont "...Bella!"
-	cont "E' ora di andare!"
+	para "...Bella!"
+	line "E' ora di andare!"
 	done
 
 _Route15UpstairsBinocularsText::

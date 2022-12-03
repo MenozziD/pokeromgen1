@@ -73,7 +73,7 @@ NoPartyText:
 
 RedsHouse2FMewText:
 	text_asm
-	CheckEvent EVENT_FOLLOWED_OAK_INTO_LAB
+	CheckEvent EVENT_GOT_POKEDEX
 	jr z, .NoParty
 	ld hl, RedsHouse2FTrainerHeader1
 	call TalkToTrainer
@@ -94,20 +94,19 @@ RedsHouse2FPokeText:
 	text_asm
 	ld hl, PokeText
 	call PrintText
-
+	CheckEvent EVENT_GOT_POKEDEX
+	jr z, .cancel
 	lb bc, MASTER_BALL, 5
 	call GiveItem
-	jr nc, .bagFull
+	jr nc, .cancel
 	;ld b, FLAG_SET
 	;predef FlagActionPredef
 	ld a, SFX_GET_ITEM_2
 	call PlaySoundWaitForCurrent
 	call WaitForSoundToFinish
+	;jp TextScriptEnd
+.cancel
 	jp TextScriptEnd
-.bagFull
-	ld a, $7
-	ldh [hSpriteIndexOrTextID], a
-	call DisplayTextID
 
 PokeText:
 	text_far _PokeText

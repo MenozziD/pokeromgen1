@@ -55,7 +55,7 @@ _MewEndBattleText::
 _PokeText::
 	text "Ecco dov'"
 	line "erano le ..."
-	cont "PALLE POKE#MON!"
+	cont "POKE BALL!"
 	done
 
 _MomHealText1::
