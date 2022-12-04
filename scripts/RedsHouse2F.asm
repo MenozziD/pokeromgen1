@@ -17,6 +17,7 @@ RedsHouse2F_TextPointers:
 	dw RedsHouse2FSgaText
 	dw RedsHouse2FMewText
 	dw RedsHouse2FPokeText
+	dw RedsHouse2FPostText
 	text_end ; unused
 
 RedsHouse2FSoText:
@@ -125,4 +126,8 @@ RedsHouse2FPokeText:
 
 PokeText:
 	text_far _PokeText
+	text_end
+
+RedsHouse2FPostText:
+	text_far _PostText
 	text_end

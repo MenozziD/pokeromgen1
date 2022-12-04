@@ -65,6 +65,20 @@ _PokeText::
 	cont "POKE BALL!"
 	done
 
+_PostText::
+	text "E' un mex dei"
+	line "DEV recuperato"
+	cont "dal PC!"
+	
+	para "12-2022: "
+	line "Grazie Pret"
+	cont "per il source..."
+	cont "Ora possiamo "
+	cont "creare quello"
+	cont "che mancava!"
+	cont "- MSxLAB -"
+	done
+
 _MomHealText1::
 	text "MOM: <PLAYER>, if"
 	line "you drive your"

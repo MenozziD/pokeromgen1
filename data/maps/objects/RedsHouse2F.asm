@@ -18,5 +18,7 @@ ENDC
 	object_event  5,  7, SPRITE_BLUE, STAY, RIGHT, 2, OPP_YOUNGSTER, 13
 	object_event  3,  1, SPRITE_MONSTER, WALK, ANY_DIR, 3, MEW, 3
 	object_event  0,  5, SPRITE_POKE_BALL, STAY, NONE, 4
+	object_event  4,  0, SPRITE_PAPER, STAY, NONE, 5
+	
 
 	def_warps_to REDS_HOUSE_2F
