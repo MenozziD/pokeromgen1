@@ -99,7 +99,7 @@ TitleScreenPikaBubbleTilemap: ; 7x4
 TitleScreenPikachuTilemap: ; 12x9
 	INCBIN "gfx/title/pikachu.tilemap"
 
-PokemonLogoGraphics: INCBIN "gfx/title/pokemon_logo.2bpp"
+PokemonLogoGraphics: INCBIN "gfx/title/pokemon_logo_japan.2bpp"
 PokemonLogoGraphicsEnd:
 PokemonLogoCornerGraphics: INCBIN "gfx/title/pokemon_logo_corner.2bpp"
 PokemonLogoCornerGraphicsEnd:
